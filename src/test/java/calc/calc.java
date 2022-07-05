@@ -7,17 +7,29 @@ import org.junit.jupiter.api.Test;
 class calc {
 
     @Test
-    public void 더하기_테스트() {
-        int rs = Calculator.add("10 + 20");
+    public void 더하기_1() {
+        int rs = Calculator.run("10 + 20");
 
         assertEquals(30, rs);
     }
 
     @Test
-    public void 더하기_테스트_2() {
-        int rs = Calculator.add("20 + 20");
+    public void 더하기_2() {
+        int rs = Calculator.run("20 + 20");
 
         assertEquals(40, rs);
+    }
+    @Test
+    public void 더하기_3() {
+        int rs = Calculator.run("30 + 30");
+
+        assertEquals(60, rs);
+    }
+    @Test
+    public void 빼기() {
+        int rs = Calculator.run("30 - 30");
+
+        assertEquals(0, rs);
     }
 
 }
