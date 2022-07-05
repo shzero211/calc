@@ -43,17 +43,24 @@ class calc {
 
         assertEquals(-30, rs);
     }
-//    @Test
-//    public void °öÇÏ±â() {
-//        int rs = Calculator.run("2 * 30");
-//
-//        assertEquals(60, rs);
-//    }
-//    @Test
-//    public void ³ª´©±â() {
-//        int rs = Calculator.run("30 / 3");
-//
-//        assertEquals(10, rs);
-//    }
+    @Test
+    public void °öÇÏ±â() {
+        int rs = Calculator.run("2 * 30");
+
+        assertEquals(60, rs);
+    }
+    @Test
+    public void °öÇÏ±â_2() {
+        int rs = Calculator.run("2 * 30 * 3");
+
+        assertEquals(180, rs);
+    }
+    @Test
+    public void ³ª´©±â() {
+        int rs = Calculator.run("30 / 3");
+
+        assertEquals(10, rs);
+    }
+    
 
 }
