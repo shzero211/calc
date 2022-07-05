@@ -3,6 +3,7 @@ package calc;
 public class Calculator {
 	public static int run(String s) {
 		boolean isMinus = s.indexOf(" - ") != -1;
+
 		
 		if(isMinus) {
 			return runMinus(s);
@@ -12,15 +13,20 @@ public class Calculator {
 
 	private static int runPlus(String s) {
 		String[] ss = s.split(" \\+ ");
-		int no1 = Integer.parseInt(ss[0]);
-		int no2 = Integer.parseInt(ss[1]);
-		return no1+no2;
+		int sum=0;
+		for(int i=0;i<ss.length;i++) {
+			sum+=Integer.parseInt(ss[i]);
+		}
+		return sum;
+		
 	}
 
 	private static int runMinus(String s) {
 		String[] ss = s.split(" \\- ");
-		int no1 = Integer.parseInt(ss[0]);
-		int no2 = Integer.parseInt(ss[1]);
-		return no1-no2;
+		int num=Integer.parseInt(ss[0]);
+		for(int i=1;i<ss.length;i++) {
+			num-=Integer.parseInt(ss[i]);
+		}
+		return num;
 	}
 }
